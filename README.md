@@ -6,8 +6,8 @@
 ---
 
 <div align="center">
-  <img src="./hardware/circuit_diagram.png" width="600px">
-  <p><em>Montagem do sensor DS18B20 com Arduino para coleta experimental.</em></p>
+  <img src="simulador.png" width="600px">
+  <p><em>Montagem do sensor DS18B20 com Arduino no simulador Wokwi.</em></p>
 </div>
 
 ---
