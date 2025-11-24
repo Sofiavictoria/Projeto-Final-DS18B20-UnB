@@ -1,5 +1,19 @@
 # Hardware Utilizado
 
+##  Sensor Escolhido
+
+Imagem e detalhes do sensor usado:
+
+![Sensor DS18B20](./imagens/sensor-de-temperatura-ds18b20-prova-d-agua.jpg){width="400px" style="display:block; margin:auto;"} 
+Figura 1 - Esquematico do circuito. Fonte: Autoria Própria,2025.
+
+**Sensor escolhido:** DS18B20 à prova d’água  
+- Faixa de medição: -55°C a 125°C  
+- Precisão: ±0,5°C  
+- Interface: 1-Wire  
+- Observação: fácil de calibrar com termômetro de referência
+
+---
 ## Componentes
 
 | Componente               | Quantidade | Função                           |
@@ -7,7 +21,7 @@
 | Arduino UNO              | 1         | Microcontrolador                |
 | DS18B20 (à prova d'água) | 1         | Sensor de temperatura           |
 | Resistor 4.7 kΩ          | 1         | Pull-up para barramento 1-Wire  |
-| Termômetro clínico        | 1         | Referência de calibração        |
+| Termômetro culinario        | 1         | Referência de calibração        |
 | Display LCD/I2C (16x2)   | 1         | Mostra temperatura em tempo real|
 
 ---
@@ -15,7 +29,7 @@
 ## Diagrama do Circuito
 
 ![Circuito](./imagens/esquematico_sensor_ds18b20_2025-11-24.png)
-
+Figura 2 - Esquematico do circuito. Fonte: Autoria Própria,2025.
 
 ---
 
@@ -43,18 +57,7 @@ Insira imagens do protótipo montado aqui:
 
 ---
 
-##  Sensor Escolhido
 
-Imagem e detalhes do sensor usado:
-
-![Sensor DS18B20](./imagens/sensor-de-temperatura-ds18b20-prova-d-agua.jpg)  
-**Sensor escolhido:** DS18B20 à prova d’água  
-- Faixa de medição: -55°C a 125°C  
-- Precisão: ±0,5°C  
-- Interface: 1-Wire  
-- Observação: fácil de calibrar com termômetro de referência
-
----
 
 ## Observações importantes
 
