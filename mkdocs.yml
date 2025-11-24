@@ -1,0 +1,82 @@
+# 🌡️ Documentação do Projeto de Calibração DS18B20
+
+site_name: Projeto de Calibração do Sensor DS18B20
+site_description: Documentação oficial do projeto de calibração e compensação do sensor DS18B20 usando Arduino
+site_author: Sofia Vitória Bispo da Silva & Juliana Bispo
+repo_url: https://github.com/SEU-USUARIO/DS18B20-Calibration-Project
+
+# Tema
+theme:
+  name: material
+  language: pt-BR
+  font:
+    text: "Poppins"
+    code: "Fira Code"
+  palette:
+    - scheme: default
+      primary: '#003366'   # Azul UnB
+      accent: '#0A6A3B'    # Verde UnB
+      toggle:
+        icon: material/weather-night
+        name: Modo escuro
+    - scheme: slate
+      primary: '#0A6A3B'
+      accent: '#003366'
+      toggle:
+        icon: material/weather-sunny
+        name: Modo claro
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.tabs
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+
+# Menu da documentação
+nav:
+  - Início: index.md
+  - Sobre o Projeto: sobre.md
+  - Hardware: hardware.md
+  - Firmware (Arduino): firmware.md
+  - Calibração: calibracao.md
+  - Resultados: resultados.md
+  - Equipe: autores.md
+
+
+# Extensões Markdown
+markdown_extensions:
+  - admonition
+  - tables
+  - footnotes
+  - def_list
+  - abbr
+  - attr_list
+  - meta
+  
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed
+  - pymdownx.emoji
+  - pymdownx.tasklist
+  - toc:
+      permalink: true
+
+# Plugins
+plugins:
+  - search
+
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://github.com/Sofiavictoria
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/sofiavictória
+  generator: false
+
+copyright: >
+   © 2025 — Universidade de Brasília (UnB).  
+    Projeto desenvolvido para a disciplina Instrumentação Eletrônica para Engenharia.  
+  
