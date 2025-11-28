@@ -38,6 +38,8 @@ $$
 
 #### 1.3. Visualização
 
+![Plot](https://github.com/Sofiavictoria/Projeto-Final-DS18B20-UnB/blob/main/curva_compensacao.png)
+
 O gráfico gerado pelo Código 2 ilustra:
 
 1.  Os **Pontos de Medição** ($X$ vs. $Y$) (em azul).
@@ -74,6 +76,8 @@ $$
 Este cálculo demonstra o desvio médio e a tendência de desvio do sensor ao longo de sua faixa de operação, o que é crucial para validação metrológica.
 
 #### 2.3. Visualização e Comparação de Desempenho
+
+![Plot](https://github.com/Sofiavictoria/Projeto-Final-DS18B20-UnB/blob/main/finalfinal.png)
 
 O código gera um gráfico com dois subplots:
 
