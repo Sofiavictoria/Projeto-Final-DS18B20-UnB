@@ -51,8 +51,11 @@ Após a calibração, o sensor é utilizado para monitoramento ambiental em temp
 
 ---
 
-## 🧩 Pinagem do Sensor DS18B20
+## 📂 Links Úteis
 
+- **[Código Fonte](https://github.com/seu-usuario/seu-repositorio)**: Acesse o código completo do projeto.
+- **[Vídeo do Teste do Trabalho](https://link-do-video.com)**: Veja o vídeo mostrando o teste prático realizado com o sensor e os resultados da calibração.
+- **[Site do Projeto (MkDocs)](https://sofiavictoria.github.io/Projeto-Final-DS18B20-UnB/)**: Acesse o site do projeto, hospedado com MkDocs.
 
 ---
 
