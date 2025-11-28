@@ -95,8 +95,8 @@ A redução significativa do MAE Calibrado em relação ao MAE Bruto é a evidê
 
 | Métrica | Valor (Exemplo) | Interpretação |
 | :---: | :---: | :---: |
-| MAE Bruto | $0.80^{\circ}C$ | Desvio médio inicial do sensor. |
-| MAE Calibrado | $0.11^{\circ}C$ | Desvio médio após a correção, indicando **alta precisão**. |
+| MAE Bruto | $0.85^{\circ}C$ | Desvio médio inicial do sensor. |
+| MAE Calibrado | $0.20^{\circ}C$ | Desvio médio após a correção, indicando **alta precisão**. |
 
 
 -----
