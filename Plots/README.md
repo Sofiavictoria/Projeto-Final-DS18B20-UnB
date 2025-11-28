@@ -40,7 +40,7 @@ $$
 
 ![Plot](https://github.com/Sofiavictoria/Projeto-Final-DS18B20-UnB/blob/main/curva_compensacao.png)
 
-O gráfico gerado pelo Código 2 ilustra:
+O gráfico gerado pelo Código mostra:
 
 1.  Os **Pontos de Medição** ($X$ vs. $Y$) (em azul).
 2.  A **Reta de Calibração** calculada (em vermelho). Esta reta representa a função ideal que deve ser aplicada ao sensor.
