@@ -70,6 +70,6 @@ O código é configurado para apresentar ao usuário os dois valores distintos, 
   * Juliana de Souza Bispo
   * Sofia Victória Bispo da Silva
 
-**Disciplina:** Instrumentação Eletrônica - Universidade de Brasília (UnB)
+**Disciplina:** Instrumentação Eletrônica para Engenharia - Universidade de Brasília (UnB)
 
 -----
