@@ -1,8 +1,10 @@
-# Firmware (Arduino)
+# Firmware 
+
+O firmware foi desenvolvido em C++ para a plataforma Arduino, responsável pela aquisição, processamento e exibição dos dados.
 
 ## Bibliotecas necessárias
 
-Instale as bibliotecas:
+O projeto utiliza as seguintes bibliotecas para abstração de hardware:
 ```cpp
 #include <OneWire.h>
 #include <DallasTemperature.h>
@@ -49,10 +51,27 @@ Limpa o LCD antes de mostrar novos dados.
 ## Codigo sem calibração
 O código completo deste projeto está disponível no GitHub:
 
-[Veja o código completo aqui](https://github.com/seuusuario/seurepositorio)
+[Veja o código completo aqui](https://github.com/Sofiavictoria/Projeto-Final-DS18B20-UnB/tree/126650e0acd3f44cfa73f3e0cb624abd18967ee5/DS18B20_sem_calibracao)
 
 ## Codigo com calibração
+O código completo deste projeto está disponível no GitHub:
 
+[Veja o código completo aqui](https://github.com/Sofiavictoria/Projeto-Final-DS18B20-UnB/tree/126650e0acd3f44cfa73f3e0cb624abd18967ee5/DS18B20_com_calibracao)
+
+### Lógica de Calibração
+A compensação do erro sistemático é realizada matematicamente dentro do microcontrolador. Após a leitura bruta, o valor passa por uma função de correção linear derivada experimentalmente.
+
+### Snippet da Função de Correção
 ```cpp
-ssss
+// Coeficientes obtidos via Regressão Linear (Python/Excel)
+const float M_COEFICIENTE = 1.0357; // Ganho (Slope)
+const float B_COEFICIENTE = -0.9344; // Offset (Intercept)
+
+float aplicarCalibracao(float temperaturaBruta) {
+    // Equação: T_corrigida = (m * T_bruta) + b
+    return (M_COEFICIENTE * temperaturaBruta) + B_COEFICIENTE;
+}
 ```
+
+---
+O código completo está disponível no [Repositório GitHub do Projeto](hhttps://github.com/Sofiavictoria/Projeto-Final-DS18B20-UnB.git )

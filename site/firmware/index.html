@@ -529,9 +529,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exemplo-minimo" class="md-nav__link">
+  <a href="#definicoes-dos-pinos" class="md-nav__link">
     <span class="md-ellipsis">
-      Exemplo mínimo
+      Definiçoes dos pinos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracao-do-sensor-e-lcd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuração do Sensor e LCD
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codigo-sem-calibracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Codigo sem calibração
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codigo-com-calibracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Codigo com calibração
     </span>
   </a>
   
@@ -647,9 +674,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exemplo-minimo" class="md-nav__link">
+  <a href="#definicoes-dos-pinos" class="md-nav__link">
     <span class="md-ellipsis">
-      Exemplo mínimo
+      Definiçoes dos pinos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracao-do-sensor-e-lcd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuração do Sensor e LCD
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codigo-sem-calibracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Codigo sem calibração
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#codigo-com-calibracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Codigo com calibração
     </span>
   </a>
   
@@ -676,30 +730,56 @@
 
 <h1 id="firmware-arduino">Firmware (Arduino)<a class="headerlink" href="#firmware-arduino" title="Permanent link">&para;</a></h1>
 <h2 id="bibliotecas-necessarias">Bibliotecas necessárias<a class="headerlink" href="#bibliotecas-necessarias" title="Permanent link">&para;</a></h2>
-<p>Instale as bibliotecas:</p>
-<ul>
-<li><strong>OneWire</strong></li>
-<li><strong>DallasTemperature</strong></li>
-</ul>
-<h2 id="exemplo-minimo">Exemplo mínimo<a class="headerlink" href="#exemplo-minimo" title="Permanent link">&para;</a></h2>
+<p>Instale as bibliotecas:
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;OneWire.h&gt;</span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;DallasTemperature.h&gt;</span>
-
-<span class="cp">#define ONE_WIRE_BUS 2</span>
-<span class="n">OneWire</span><span class="w"> </span><span class="nf">oneWire</span><span class="p">(</span><span class="n">ONE_WIRE_BUS</span><span class="p">);</span>
-<span class="n">DallasTemperature</span><span class="w"> </span><span class="nf">sensors</span><span class="p">(</span><span class="o">&amp;</span><span class="n">oneWire</span><span class="p">);</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
-<span class="w">  </span><span class="n">sensors</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;LiquidCrystal_I2C.h&gt;</span>
+</code></pre></div></p>
+<blockquote>
+<ul>
+<li><strong>OneWire</strong> - Comunicação com o sensor.</li>
+<li><strong>DallasTemperature</strong> - Biblioteca utilizada pelo DS18B20.</li>
+<li><strong>LiquidCrystal_I2C.h</strong> - Biblioteca utilizada para fazer a comunicação com o display 16x2.</li>
+</ul>
+</blockquote>
+<h2 id="definicoes-dos-pinos">Definiçoes dos pinos<a class="headerlink" href="#definicoes-dos-pinos" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="cp">#define PINO_ONEWIRE 12 </span><span class="c1">// Pino conectado ao sensor DS18B20</span>
+<span class="cp">#define COLUNAS_LCD 16   </span><span class="c1">// Número de colunas do LCD</span>
+<span class="cp">#define LINHAS_LCD 2     </span><span class="c1">// Número de linhas do LCD</span>
+<span class="cp">#define ENDERECO_I2C 0x27 </span><span class="c1">// Endereço I2C do LCD</span>
+</code></pre></div>
+<blockquote>
+<ul>
+<li><strong>PINO_ONEWIRE</strong> - define o pino do Arduino conectado ao sensor.</li>
+<li><strong>COLUNAS_LCD e LINHAS_LCD</strong> - tamanho do display LCD (16x2)</li>
+<li><strong>ENDERECO_I2C</strong> - endereço do LCD no barramento I2C.</li>
+</ul>
+</blockquote>
+<h2 id="configuracao-do-sensor-e-lcd">Configuração do Sensor e LCD<a class="headerlink" href="#configuracao-do-sensor-e-lcd" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">sensor</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">sensor</span><span class="p">.</span><span class="n">getAddress</span><span class="p">(</span><span class="n">enderecoSensor</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">lcd</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+<span class="w">    </span><span class="n">lcd</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Sensor nao encontrado&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span><span class="w"> </span><span class="c1">// Para execução se sensor não encontrado</span>
 <span class="p">}</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">sensors</span><span class="p">.</span><span class="n">requestTemperatures</span><span class="p">();</span>
-<span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">tempC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sensors</span><span class="p">.</span><span class="n">getTempCByIndex</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-<span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">tempC</span><span class="p">);</span>
-<span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
-<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>Inicializa o sensor e verifica se ele está presente no barramento.
+Se não estiver, mostra mensagem e interrompe o programa.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="c1">// Define a resolução do sensor</span>
+<span class="n">sensor</span><span class="p">.</span><span class="n">setResolution</span><span class="p">(</span><span class="n">enderecoSensor</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">);</span>
+<span class="n">lcd</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+</code></pre></div>
+<blockquote>
+<p>Define a precisão de 12 bits para o sensor DS18B20 (0,0625°C).
+Limpa o LCD antes de mostrar novos dados.</p>
+</blockquote>
+<h2 id="codigo-sem-calibracao">Codigo sem calibração<a class="headerlink" href="#codigo-sem-calibracao" title="Permanent link">&para;</a></h2>
+<p>O código completo deste projeto está disponível no GitHub:</p>
+<p><a href="https://github.com/seuusuario/seurepositorio">Veja o código completo aqui</a></p>
+<h2 id="codigo-com-calibracao">Codigo com calibração<a class="headerlink" href="#codigo-com-calibracao" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">ssss</span>
 </code></pre></div>
 
 

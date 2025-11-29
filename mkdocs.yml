@@ -3,7 +3,7 @@
 site_name: Projeto de Calibração do Sensor DS18B20
 site_description: Documentação oficial do projeto de calibração e compensação do sensor DS18B20 usando Arduino
 site_author: Sofia Vitória Bispo da Silva & Juliana Bispo
-repo_url: https://github.com/SEU-USUARIO/DS18B20-Calibration-Project
+repo_url: https://github.com/Sofiavictoria/Projeto-Final-DS18B20-UnB.git
 
 # Tema
 theme:
@@ -39,7 +39,7 @@ nav:
   - Início: index.md
   - Sobre o Projeto: sobre.md
   - Hardware: hardware.md
-  - Firmware (Arduino): firmware.md
+  - Firmware : firmware.md
   - Calibração: calibracao.md
   - Resultados: resultados.md
   - Equipe: autores.md
@@ -63,18 +63,18 @@ markdown_extensions:
   - pymdownx.tasklist
   - toc:
       permalink: true
+      
+  # 💡 ESSENCIAL PARA RENDERIZAR EQUAÇÕES
+  - pymdownx.arithmatex:
+      generic: true
 
 # Plugins
 plugins:
   - search
 
-extra:
-  social:
-    - icon: fontawesome/brands/linkedin
-      link: https://github.com/Sofiavictoria
-    - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/in/sofiavictória
-  generator: false
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 copyright: >
    © 2025 — Universidade de Brasília (UnB).  

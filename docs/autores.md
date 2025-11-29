@@ -1,7 +1,13 @@
-# Equipe
+# Equipe do Projeto
 
-- **Sofia Vitória Bispo da Silva** — Desenvolvimento de experimento, firmware e documentação  
-- **Juliana de Souza Bispo** — Coleta de dados, análise experimental e escrita
+Este projeto foi desenvolvido como requisito avaliativo da disciplina de Instrumentação Eletrônica para Engenharia (FGA0132) da Universidade de Brasília (UnB/FGA).
 
-- **Orientação:** Profa. Claudia Patricia Ochoa Diaz — Universidade de Brasília (UnB)
+## Integrantes
 
+| Nome | E-mail |Curso |
+| :--- | :--- | :--- |
+| **Juliana de Souza Bispo** | ju.souzbispo@gmail.com | Engenharia Eletronica |
+| **Sofia Victória Bispo da Silva** | sofiabanos@gmail.com | Engenharia Eletronica |
+
+**Professora:** Claudia Patricia Ochoa Diaz
+**Semestre:** 2025/2

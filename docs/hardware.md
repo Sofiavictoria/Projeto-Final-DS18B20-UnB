@@ -5,7 +5,7 @@
 Imagem e detalhes do sensor usado:
 
 ![Sensor DS18B20](./imagens/sensor-de-temperatura-ds18b20-prova-d-agua.jpg){width="400px" style="display:block; margin:auto;"} 
-Figura 1 - Esquematico do circuito. Fonte: Autoria Própria,2025.
+Figura 1 - Esquematico do circuito. 
 
 **Sensor escolhido:** DS18B20 à prova d’água  
 - Faixa de medição: -55°C a 125°C  
@@ -33,20 +33,21 @@ Figura 2 - Esquematico do circuito. Fonte: Autoria Própria,2025.
 
 ---
 
-## Conexões
 
-**Sensor DS18B20**  
-- VCC → 5V  
-- DQ → Pino Digital 2 (com resistor 4.7kΩ entre DQ e VCC)  
-- GND → GND  
+O sensor comunica-se através do protocolo **1-Wire**. O pino de dados (DQ) do sensor deve ser conectado a uma porta digital do Arduino, com um resistor de pull-up conectado ao VCC (5V).
 
-**Display LCD/I2C (16x2)**  
-- VCC → 5V  
-- GND → GND  
-- SDA → A4 (Arduino Uno)  
-- SCL → A5 (Arduino Uno)  
+| Componente | Pino Componente | Conexão Arduino | Observação |
+| :--- | :--- | :--- | :--- |
+| **DS18B20** | VCC (Vermelho) | 5V | Alimentação |
+| **DS18B20** | GND (Preto) | GND | Terra |
+| **DS18B20** | DATA (Amarelo) | D12 | Pino de Dados  |
+| **Resistor** | 4.7k$\Omega$ | D12 e 5V | Pull-up entre Dados e VCC |
+| **LCD I2C** | SDA | A4 | Dados I2C |
+| **LCD I2C** | SCL | A5 | Clock I2C |
 
-> Observação: Para displays I2C, verifique o endereço do módulo (normalmente 0x27 ou 0x3F) antes de programar.
+> **Observação 1:** O resistor de 4.7k$\Omega$ é crucial para a integridade do sinal digital no barramento 1-Wire
+
+> **Observação 2:** Para displays I2C, verifique o endereço do módulo (normalmente 0x27 ou 0x3F) antes de programar.
 
 ---
 ##  Fotos do Protótipo
@@ -65,3 +66,5 @@ Insira imagens do protótipo montado aqui:
 - Evite curtos entre os cabos.  
 - Use cabos curtos ou blindados para leituras mais estáveis.  
 - Certifique-se de ajustar contraste do display e verificar endereços I2C.  
+
+

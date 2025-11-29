@@ -1,52 +1,36 @@
-## Passo 1 — Metodologia
+# Experimento de Calibração
 
-**Procedimento resumido:**
+O procedimento experimental foi estruturado para caracterizar a resposta estática do sensor DS18B20, submetendo-o a três condições térmicas distintas e representativas: **água resfriada (ponto frio)**, **água à temperatura ambiente** e **água aquecida (ponto quente)**.
 
-1. Preparar três amostras: água gelada, ambiente, água quente.
-2. Submergir o sensor DS18B20 e o termômetro de referência em cada amostra.
-3. Aguardar 3 minutos para estabilização e registrar leituras a cada 1 minuto.
-4. Repetir para cada condição, retornando o sensor ao ambiente entre amostras.
+Esta abordagem prática permitiu verificar o comportamento do sensor cobrindo tanto as temperaturas ideais para o funcionamento de aquários quanto situações críticas de falha.
 
-**Condições controladas:** temperatura ambiente registrada, tempo de estabilização fixo, mesma profundidade de imersão.
+## Padrão de Referência
+Para validação, utilizou-se o método de comparação direta com um padrão de referência, o **Termômetro Digital Tipo Espeto TP101**.
 
-**Observação:** Anote hora, ambiente (T ambiente), e se houve flutuação visível.
+**Especificações Técnicas:**
 
+- **Faixa de medição:** $-50^{\circ}C$ a $+300^{\circ}C$.
+- **Resolução:** $0,1^{\circ}C$.
+- **Exatidão:** $\pm1^{\circ}C$ (na faixa de $20^{\circ}C$ a $80^{\circ}C$).
 
----
+## Modelo Analítico
+O princípio de funcionamento interno do sensor baseia-se na equação analítica da tensão *bandgap* de silício. A diferença de tensão base-emissor ($\Delta V_{BE}$) utilizada para a conversão é descrita pela equação:
 
-## Passo 2 — Dados Coletados
+$$\Delta V_{BE} = \frac{kT}{q} \cdot \ln\left(\frac{I_{C2}}{I_{C1}}\right)$$
 
-A seguir as medições coletadas (exemplo de formato). Substitua pelos seus dados reais.
+O experimento visa corrigir os desvios sistemáticos (ganho e offset) que ocorrem na implementação física desta equação.
 
-| Condição     | Rep 1 (Ref °C) | Rep 2 (Ref °C) | Rep 3 (Ref °C) | Média Ref (°C) | DS18B20 Rep1 | DS18B20 Rep2 | DS18B20 Rep3 | Média DS18B20 | Erro (%) |
-|--------------|----------------|----------------|----------------|----------------|--------------|--------------|--------------|---------------|----------|
-| Água gelada  | 5.1            | 5.0            | 5.1            | 5.07           | 4.8          | 4.9          | 4.7          | 4.80          | 5.3      |
-| Ambiente     | 23.4           | 23.6           | 23.5           | 23.50          | 23.1         | 23.2         | 23.0         | 23.10         | 1.7      |
-| Água quente  | 45.0           | 44.8           | 45.1           | 44.97          | 44.2         | 44.0         | 44.5         | 44.23         | 1.6      |
+## Procedimento Experimental
+O experimento foi realizado seguindo rigorosamente os passos abaixo:
 
-> Substitua a tabela acima pelos seus valores reais (arquivo `results/raw_data.csv`).
+1.  **Preparação dos recipientes:** Foram utilizados três copos com água em diferentes condições térmicas: temperatura ambiente, água gelada do filtro e água aquecida.
+2.  **Inserção dos sensores:** O sensor DS18B20 e o termômetro de referência TP101 foram imersos simultaneamente no mesmo copo, garantindo que não tocassem o fundo ou as paredes do recipiente.
+3.  **Estabilização da leitura:** Cada sensor permaneceu imerso por **3 minutos**, permitindo que as medições se estabilizassem. Durante esse período, foram registradas leituras a cada 1 minuto.
+4.  **Intervalo entre medições:** Após medir a temperatura de um copo, os sensores foram retirados e deixados em repouso por **10 minutos**, permitindo que retornassem à temperatura ambiente antes da próxima medição.
+5.  **Repetição:** O mesmo processo foi repetido para os três copos, garantindo consistência.
+6.  **Registro:** As medições obtidas foram anotadas para cálculo do erro percentual.
 
-# Passo 3 — Curva de Calibração
+## Equação de Calibração Obtida
+Após a coleta de dados e aplicação do método dos Mínimos Quadrados (Regressão Linear), chegou-se à seguinte fórmula de correção:
 
-A partir dos dados coletados, gere a curva de calibração (por exemplo, regressão linear):
-
-![Curva de calibração](../results/calibration_curve.png)
-
-**Interpretação:** explique a inclinação, offset e se há não-linearidade na faixa medida.
-MD
-
-
-# Passo 4 — Modelo de Compensação
-
-Exemplo de modelo linear aplicado:
-
-\`\`\`
-Temperatura_corrigida = a * Temperatura_DS18B20 + b
-\`\`\`
-
-Coeficientes encontrados (exemplo):
-- a = 1.02
-- b = -0.35
-
-**Implementação:** aplicar a e b no script Python que processa `raw_data.csv` e salvar `results/adjusted_data.csv`.
-MD
+$$T_{corrigida} = 1.0357 \cdot T_{sensor} - 0.9344$$
