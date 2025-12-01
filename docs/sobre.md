@@ -6,9 +6,11 @@ Este projeto visa a instrumentação e calibração de um sistema de medição d
 ## Motivação
 A medição precisa de temperatura é fundamental em diversos cenários, mas a motivação prática deste trabalho concentra-se no **monitoramento térmico de aquários e ecossistemas aquáticos**.
 
-- A estabilidade térmica é vital para a saúde de peixes e corais.
-- Muitas espécies não toleram variações bruscas ou erros de leitura superiores a  $5^{\circ}C$ em casos menos críticos.
-- Sensores de baixo custo sem calibração podem apresentar desvios que comprometem a segurança biológica do habitat.
+
+-  A estabilidade térmica é vital para a saúde de peixes e corais.
+-  Muitas espécies não toleram variações bruscas ou erros de leitura superiores a  $5^{\circ}C$ em casos menos críticos.
+-  Sensores de baixo custo sem calibração podem apresentar desvios que comprometem a segurança biológica do habitat.
+
 
 ## Objetivos
 O objetivo principal é transformar um sensor comercial comum em um instrumento de maior exatidão.
