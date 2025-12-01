@@ -26,10 +26,15 @@ Após implementar a equação acima no firmware, o sistema foi reavaliado.
 | **Natural** | 25,2°C | 25,2°C | 0,0°C |
 | **Quente** | 40,3°C | 40,2°C | 0,1°C |
 *[Fonte: Tabela III do Relatório]*.
+---
+## Gráficos e Códigos
+- Os códigos de compensaão e comparação  estão disponíveis no [Repositório GitHub do Projeto](https://github.com/Sofiavictoria/Projeto-Final-DS18B20-UnB/tree/d5736d330dd3f2bf50f4f863fae7bd7e31e713ce/Plots )
 
+---
 ### Melhoria de Desempenho
 * O desvio médio global foi reduzido de **0,85°C** para **0,20°C**.
 * Isso representa uma melhoria de aproximadamente **76%** na precisão.
-
+---
 ## Conclusão
 O sensor calibrado atende aos requisitos para monitoramento de aquários, garantindo leituras com erro inferior a 0,5°C na faixa de operação usual.
+

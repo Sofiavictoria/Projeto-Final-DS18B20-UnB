@@ -2,10 +2,8 @@
 
 ##  Sensor Escolhido
 
-Imagem e detalhes do sensor usado:
-
 ![Sensor DS18B20](./imagens/sensor-de-temperatura-ds18b20-prova-d-agua.jpg){width="400px" style="display:block; margin:auto;"} 
-Figura 1 - Esquematico do circuito. 
+
 
 **Sensor escolhido:** DS18B20 à prova d’água  
 - Faixa de medição: -55°C a 125°C  
@@ -13,6 +11,14 @@ Figura 1 - Esquematico do circuito.
 - Interface: 1-Wire  
 - Observação: fácil de calibrar com termômetro de referência
 
+## Instrumento de referencia 
+
+![TP101](./imagens/TP1011-1200x1200.jpg){width="400px" style="display:block; margin:auto;"} 
+
+**Instrumento de referencia:** Termômetro Digital Tipo Espeto TP101
+- Faixa de Medição -50ºC a +300 ºC / -58ºF a +572 ºF;
+- Resolução: 0.1 ºC/ºF;
+- Exatidão: (+-1°C ) para a faixa (-20 a 80 °C);
 ---
 ## Componentes
 
@@ -51,15 +57,19 @@ O sensor comunica-se através do protocolo **1-Wire**. O pino de dados (DQ) do s
 
 ---
 ##  Fotos do Protótipo
-Insira imagens do protótipo montado aqui:
-
-![Protótipo completo]()  
-> Mostre como o sensor, o display e o Arduino estão conectados.
-
+> Protótipo de teste
+![Protótipo de teste](./imagens/prototipo2.jpeg)  
 ---
+> Protótipo completo
+![Protótipo completo](./imagens/prototipo1.jpeg)  
 
 
+----
+## Fotos do  teste
+![Teste completo](./imagens/teste1.jpeg) 
 
+![Teste completo](./imagens/teste2.jpeg) 
+---
 ## Observações importantes
 
 - Mantenha o sensor e o display protegidos de água, caso usados fora do laboratório.  
