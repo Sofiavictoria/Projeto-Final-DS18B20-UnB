@@ -16,9 +16,10 @@
 ![TP101](./imagens/TP1011-1200x1200.jpg){width="400px" style="display:block; margin:auto;"} 
 
 **Instrumento de referencia:** Termômetro Digital Tipo Espeto TP101
-- Faixa de Medição -50ºC a +300 ºC / -58ºF a +572 ºF;
-- Resolução: 0.1 ºC/ºF;
-- Exatidão: (+-1°C ) para a faixa (-20 a 80 °C);
+
+-  Faixa de Medição -50ºC a +300 ºC / -58ºF a +572 ºF;
+-  Resolução: 0.1 ºC/ºF;
+-  Exatidão: (+-1°C ) para a faixa (-20 a 80 °C);
 ---
 ## Componentes
 
