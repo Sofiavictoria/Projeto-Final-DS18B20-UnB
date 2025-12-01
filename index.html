@@ -413,6 +413,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="." class="md-nav__link md-nav__link--active">
         
   
@@ -429,6 +447,36 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sobre-o-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sobre o Projeto
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -616,6 +664,25 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sobre-o-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sobre o Projeto
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -636,25 +703,21 @@
 
 <h1 id="projeto-de-calibracao-do-sensor-ds18b20">Projeto de Calibração do Sensor DS18B20<a class="headerlink" href="#projeto-de-calibracao-do-sensor-ds18b20" title="Permanent link">&para;</a></h1>
 <p>Bem-vinda(o)! Esta é a documentação do projeto final da disciplina <strong>Instrumentação Eletrônica para Engenharia — UnB (2025/2)</strong>.</p>
-<p><strong>Objetivo:</strong> calibrar o sensor DS18B20, comparar com referência e implementar uma compensação digital.</p>
+<p><strong>Objetivo:</strong> calibrar o sensor DS18B20, compará-lo com um sensor de referência e implementar uma compensação digital baseada nos desvios observados.</p>
 <ul>
 <li><a href="assets/Relatorio_Projeto_Final_DS18B20.pdf">Baixar relatório (PDF)</a></li>
 </ul>
-<h1 id="projeto-final-calibracao-de-sensor-de-temperatura">Projeto Final: Calibração de Sensor de Temperatura<a class="headerlink" href="#projeto-final-calibracao-de-sensor-de-temperatura" title="Permanent link">&para;</a></h1>
-<p><strong>Disciplina:</strong> Instrumentação Eletrônica para Engenharia (FGA0132)<br />
-<strong>Instituição:</strong> Universidade de Brasília (UnB)<br />
-<strong>Semestre:</strong> 2025/2<br />
-<strong>Autoras:</strong> Juliana de Souza Bispo e Sofia Victória Bispo da Silva</p>
-<hr />
-<h2 id="introducao">Introdução<a class="headerlink" href="#introducao" title="Permanent link">&para;</a></h2>
-<p>A medição precisa de temperatura é uma necessidade crítica em diversas áreas, abrangendo desde a automação industrial e dispositivos médicos de alta precisão até o fundamental monitoramento ambiental. Em muitos desses cenários, a confiabilidade dos dados é determinante para a segurança e eficiência dos processos.</p>
-<h3 id="motivacao-monitoramento-de-aquarios">Motivação: Monitoramento de Aquários<a class="headerlink" href="#motivacao-monitoramento-de-aquarios" title="Permanent link">&para;</a></h3>
-<p>Dentro deste contexto de monitoramento ambiental, uma aplicação prática crítica é o controle térmico de <strong>aquários e ecossistemas aquáticos</strong>. A estabilidade da temperatura é vital para a sobrevivência de espécies sensíveis, que muitas vezes não toleram variações bruscas ou erros de leitura superiores a 1°C. Para atender a essa demanda específica, torna-se necessário o uso de instrumentos que sejam, ao mesmo tempo, blindados contra a umidade e metrologicamente confiáveis, garantindo que o habitat seja mantido dentro dos parâmetros ideais de preservação da vida.</p>
-<h3 id="o-sensor-ds18b20">O Sensor DS18B20<a class="headerlink" href="#o-sensor-ds18b20" title="Permanent link">&para;</a></h3>
-<p>Para atender a essa demanda, o sensor <strong>DS18B20</strong> apresenta-se como uma solução prática e altamente confiável, notadamente por sua saída de dados digital e a disponibilidade de encapsulamentos robustos e à prova d'água (<em>waterproof</em>). Diferentemente de sensores analógicos, que tipicamente demandam circuitos adicionais para condicionamento de sinal e conversão, o DS18B20 realiza internamente todas as etapas de leitura, processamento e comunicação digital através do protocolo 1-Wire.</p>
-<h3 id="o-problema-e-o-objetivo">O Problema e o Objetivo<a class="headerlink" href="#o-problema-e-o-objetivo" title="Permanent link">&para;</a></h3>
-<p>Entretanto, a acurácia de qualquer instrumento de medição de baixo custo pode ser sutilmente afetada por variações no processo de fabricação. É por essa razão que a <strong>calibração</strong> emerge como um processo crucial para validar e garantir a precisão dos dados coletados.</p>
-<p>Neste contexto, o presente trabalho se propõe a descrever e documentar um experimento detalhado de calibração estática do sensor DS18B20, visando validar e aplicar uma compensação digital para corrigir os desvios observados.</p>
+<h2 id="sobre-o-projeto">Sobre o Projeto<a class="headerlink" href="#sobre-o-projeto" title="Permanent link">&para;</a></h2>
+<p>Este trabalho apresenta a calibração estática do sensor digital <strong>DS18B20</strong>, realizada com o objetivo de avaliar seu desempenho real, comparar com um padrão de referência e aplicar uma correção digital simples.</p>
+<p>A aplicação motivadora é o <strong>monitoramento térmico de aquários</strong>, que exige estabilidade e sensores confiáveis em ambientes úmidos.</p>
+<p>O relatório completo inclui:</p>
+<ul>
+<li>descrição do experimento;  </li>
+<li>metodologia de calibração;  </li>
+<li>análise dos dados;  </li>
+<li>modelo de compensação;  </li>
+<li>conclusões.</li>
+</ul>
 
 
 

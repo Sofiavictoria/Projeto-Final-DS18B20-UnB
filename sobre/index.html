@@ -774,15 +774,17 @@
 <p>Este projeto visa a instrumentação e calibração de um sistema de medição de temperatura utilizando o sensor digital <strong>DS18B20</strong>. O trabalho aborda desde a montagem do hardware até a implementação de algoritmos de compensação via software para mitigar erros de fabricação e garantir alta confiabilidade metrológica.</p>
 <h2 id="motivacao">Motivação<a class="headerlink" href="#motivacao" title="Permanent link">&para;</a></h2>
 <p>A medição precisa de temperatura é fundamental em diversos cenários, mas a motivação prática deste trabalho concentra-se no <strong>monitoramento térmico de aquários e ecossistemas aquáticos</strong>.
-* A estabilidade térmica é vital para a saúde de peixes e corais.
-* Muitas espécies não toleram variações bruscas ou erros de leitura superiores a <span class="arithmatex">\(1^{\circ}C\)</span> (ou <span class="arithmatex">\(5^{\circ}C\)</span> em casos menos críticos).
-* Sensores de baixo custo sem calibração podem apresentar desvios que comprometem a segurança biológica do habitat.</p>
+- A estabilidade térmica é vital para a saúde de peixes e corais.
+- Muitas espécies não toleram variações bruscas ou erros de leitura superiores a  <span class="arithmatex">\(5^{\circ}C\)</span> em casos menos críticos.
+- Sensores de baixo custo sem calibração podem apresentar desvios que comprometem a segurança biológica do habitat.</p>
 <h2 id="objetivos">Objetivos<a class="headerlink" href="#objetivos" title="Permanent link">&para;</a></h2>
-<p>O objetivo principal é transformar um sensor comercial comum em um instrumento de maior exatidão.
-1.  <strong>Caracterizar</strong> a resposta do sensor em três faixas de temperatura (Fria, Ambiente, Quente).
-2.  <strong>Modelar</strong> o erro sistemático através de Regressão Linear.
-3.  <strong>Implementar</strong> a compensação digital no firmware do microcontrolador.
-4.  <strong>Validar</strong> a melhoria de desempenho comparando com um termômetro de referência padrão.</p>
+<p>O objetivo principal é transformar um sensor comercial comum em um instrumento de maior exatidão.</p>
+<ol>
+<li><strong>Caracterizar</strong> a resposta do sensor em três faixas de temperatura (Fria, Ambiente, Quente).</li>
+<li><strong>Modelar</strong> o erro sistemático através de Regressão Linear.</li>
+<li><strong>Implementar</strong> a compensação digital no firmware do microcontrolador.</li>
+<li><strong>Validar</strong> a melhoria de desempenho comparando com um termômetro de referência padrão.</li>
+</ol>
 <h2 id="o-sensor-ds18b20">O Sensor DS18B20<a class="headerlink" href="#o-sensor-ds18b20" title="Permanent link">&para;</a></h2>
 <p>O componente escolhido foi o <strong>DS18B20</strong> devido ao seu encapsulamento à prova d'água e comunicação digital via protocolo 1-Wire, que simplifica a integração de múltiplos sensores sem necessidade de conversores analógico-digitais externos.</p>
 
